@@ -22,8 +22,6 @@
 {
     imm6 {value}                            => 0b00 @ value`6
     load r{src: register}, r{dst: register} => 0b10 @ src`3 @ dst`3
-    load [r3], r{dst: register}             => 0b10 @ 0b110 @ dst`3
-    load r{src: register}, [r3]             => 0b10 @ src`3 @ 0b110
     aload                                   => 0b10 @ 0b110 @ 0b110
     in r{r: register}                            => 0b10 @ 0b110 @ r
     out r{r: register}                           => 0b10 @ r @ 0b110
