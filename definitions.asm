@@ -29,22 +29,30 @@
 
 #ruledef
 {
-    or          => 0b01 @ 0b000 @ 0b000
-    nand        => 0b01 @ 0b000 @ 0b001
-    nor         => 0b01 @ 0b000 @ 0b010
-    and         => 0b01 @ 0b000 @ 0b011
-    add         => 0b01 @ 0b000 @ 0b100
-    sub         => 0b01 @ 0b000 @ 0b101
-    ALU_RES1    => 0b01 @ 0b000 @ 0b110
-    ALU_RES2    => 0b01 @ 0b000 @ 0b111
-    ALU_EXT1_RES0 => 0b01 @ 0b001 @ 0b000
-    ALU_EXT1_RES1 => 0b01 @ 0b001 @ 0b001
-    ALU_EXT1_RES2 => 0b01 @ 0b001 @ 0b010
-    ALU_EXT1_RES3 => 0b01 @ 0b001 @ 0b011
-    ALU_EXT1_RES4 => 0b01 @ 0b001 @ 0b100
-    ALU_EXT1_RES5 => 0b01 @ 0b001 @ 0b101
-    ALU_EXT1_RES6 => 0b01 @ 0b001 @ 0b110
-    ALU_EXT1_RES7 => 0b01 @ 0b001 @ 0b111
+    or              => 0b01 @ 0b000 @ 0b000
+    nand            => 0b01 @ 0b000 @ 0b001
+    nor             => 0b01 @ 0b000 @ 0b010
+    and             => 0b01 @ 0b000 @ 0b011
+    xnor            => 0b01 @ 0b000 @ 0b100
+    xor             => 0b01 @ 0b000 @ 0b101
+    not             => 0b01 @ 0b000 @ 0b110
+    ALU_EXT0_RES7   => 0b01 @ 0b000 @ 0b111
+    ashr            => 0b01 @ 0b001 @ 0b000
+    ALU_EXT1_RES1   => 0b01 @ 0b001 @ 0b001
+    mul             => 0b01 @ 0b001 @ 0b010
+    sub             => 0b01 @ 0b001 @ 0b011
+    add             => 0b01 @ 0b001 @ 0b100
+    ALU_EXT1_RES5   => 0b01 @ 0b001 @ 0b101
+    ALU_EXT1_RES6   => 0b01 @ 0b001 @ 0b110
+    ALU_EXT1_RES7   => 0b01 @ 0b001 @ 0b111
+    rol             => 0b01 @ 0b010 @ 0b000
+    ror             => 0b01 @ 0b010 @ 0b001
+    shr             => 0b10 @ 0b010 @ 0b010
+    shl             => 0b10 @ 0b010 @ 0b011
+    neg             => 0b10 @ 0b010 @ 0b100
+    ALU_EXT2_RES5   => 0b10 @ 0b010 @ 0b101
+    ALU_EXT2_RES6   => 0b10 @ 0b010 @ 0b110
+    ALU_EXT2_RES7   => 0b10 @ 0b010 @ 0b111
     ; and so on...
     ALU_EXT7_RES1 => 0b01 @ 0b111 @ 0b000
 }
