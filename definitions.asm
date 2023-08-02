@@ -20,11 +20,11 @@
 
 #ruledef
 {
-    imm6 {value}                            => 0b00 @ value`6
-    load r{src: register}, r{dst: register} => 0b10 @ src`3 @ dst`3
-    aload                                   => 0b10 @ 0b110 @ 0b110
-    in r{r: register}                            => 0b10 @ 0b110 @ r
-    out r{r: register}                           => 0b10 @ r @ 0b110
+    imm6 {value}                                => 0b00 @ value`6
+    load r{src: register}, r{dst: register}     => 0b10 @ src`3 @ dst`3
+    aload                                       => 0b10 @ 0b110 @ 0b110
+    in r{r: register}                           => 0b10 @ 0b110 @ r
+    out r{r: register}                          => 0b10 @ r @ 0b110
 }    
 
 #ruledef
@@ -54,25 +54,25 @@
     ALU_EXT2_RES6   => 0b10 @ 0b010 @ 0b110
     ALU_EXT2_RES7   => 0b10 @ 0b010 @ 0b111
     ; and so on...
-    ALU_EXT7_RES1 => 0b01 @ 0b111 @ 0b000
+    ALU_EXT7_RES1   => 0b01 @ 0b111 @ 0b000
 }
 
 ; conditional jump block
 #ruledef
 {
-    bn => 0b11 @ 0b000 @ 0b000
-    beqz => 0b11 @ 0b000 @ 0b001
-    bltz => 0b11 @ 0b000 @ 0b010
-    blez => 0b11 @ 0b000 @ 0b011
-    ba => 0b11 @ 0b000 @ 0b100
-    bnez => 0b11 @ 0b000 @ 0b101
-    bgez => 0b11 @ 0b000 @ 0b110
-    bgtz => 0b11 @ 0b000 @ 0b111
+    bn      => 0b11 @ 0b000 @ 0b000
+    beqz    => 0b11 @ 0b000 @ 0b001
+    bltz    => 0b11 @ 0b000 @ 0b010
+    blez    => 0b11 @ 0b000 @ 0b011
+    ba      => 0b11 @ 0b000 @ 0b100
+    bnez    => 0b11 @ 0b000 @ 0b101
+    bgez    => 0b11 @ 0b000 @ 0b110
+    bgtz    => 0b11 @ 0b000 @ 0b111
 }
 
 ; halt encodings
 #ruledef
 {
-    hcf => 0b10 @ 0b111 @ 0b111
-    halt => 0b10 @ 0b111 @ 0b111
+    hcf     => 0b10 @ 0b111 @ 0b111
+    halt    => 0b10 @ 0b111 @ 0b111
 }
