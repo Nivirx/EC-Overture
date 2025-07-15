@@ -1,8 +1,6 @@
 #include "definitions.asm"
-; just a quick scratch pad place for programs
+; template/scratch pad
 prog:
-    in r1
-    in r2
-    xor
+    imm6 0x1
 .result:
-    out r3
+    out r0

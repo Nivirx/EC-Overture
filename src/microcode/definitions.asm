@@ -37,7 +37,6 @@
     3      => 0b011
     4      => 0b100
     5      => 0b101
-
 }
 
 ; immediate load encodings
@@ -51,8 +50,8 @@
 {
     load r{src: register}, r{dst: register}     => 0b10 @ src`3 @ dst`3
     aload                                       => 0b10 @ 0b110 @ 0b110
-    in r{r: register}                           => 0b10 @ 0b110 @ r
-    out r{r: register}                          => 0b10 @ r @ 0b110
+    in r{r: register}                           => 0b10 @ 0b110 @ r`3
+    out r{r: register}                          => 0b10 @ r`3 @ 0b110
 }
 
 ; EXT0 functions
